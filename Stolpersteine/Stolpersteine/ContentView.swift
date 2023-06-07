@@ -32,7 +32,7 @@ struct ContentView: View {
                 Image(systemName: "person")
                 Text("Profile")
             }
-        }.accentColor(.red)
+        }.accentColor(Color(hex: "7F462C"))
     }
 }
 
