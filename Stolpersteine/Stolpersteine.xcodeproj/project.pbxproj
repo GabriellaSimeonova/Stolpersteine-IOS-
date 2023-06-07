@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		301D88452A30E68C0007C461 /* CandleLightningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301D88442A30E68C0007C461 /* CandleLightningView.swift */; };
 		3037A0832A2F52AF00986F7D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037A0822A2F52AF00986F7D /* HomeView.swift */; };
 		3037A0852A2F52C000986F7D /* StoneProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037A0842A2F52C000986F7D /* StoneProfileView.swift */; };
 		3037A0872A2F52D700986F7D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037A0862A2F52D700986F7D /* MapView.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		301D88442A30E68C0007C461 /* CandleLightningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandleLightningView.swift; sourceTree = "<group>"; };
 		3037A0822A2F52AF00986F7D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3037A0842A2F52C000986F7D /* StoneProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoneProfileView.swift; sourceTree = "<group>"; };
 		3037A0862A2F52D700986F7D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
@@ -42,6 +44,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		301D88432A30E6690007C461 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				301D88442A30E68C0007C461 /* CandleLightningView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		F92EA9FF2A2F406100C3F1F3 = {
 			isa = PBXGroup;
 			children = (
@@ -61,6 +71,7 @@
 		F92EAA0A2A2F406100C3F1F3 /* Stolpersteine */ = {
 			isa = PBXGroup;
 			children = (
+				301D88432A30E6690007C461 /* Components */,
 				F92EAA0B2A2F406100C3F1F3 /* StolpersteineApp.swift */,
 				F92EAA0D2A2F406100C3F1F3 /* ContentView.swift */,
 				3037A0822A2F52AF00986F7D /* HomeView.swift */,
@@ -154,6 +165,7 @@
 			files = (
 				3037A08B2A2F52FA00986F7D /* UserProfileView.swift in Sources */,
 				3037A0832A2F52AF00986F7D /* HomeView.swift in Sources */,
+				301D88452A30E68C0007C461 /* CandleLightningView.swift in Sources */,
 				F92EAA0E2A2F406100C3F1F3 /* ContentView.swift in Sources */,
 				3037A0872A2F52D700986F7D /* MapView.swift in Sources */,
 				3037A0892A2F52E100986F7D /* FaqView.swift in Sources */,
