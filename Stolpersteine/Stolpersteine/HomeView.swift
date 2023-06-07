@@ -9,7 +9,12 @@ import SwiftUI
 
 struct Victim: Hashable,  Codable{
     let name: String
-    let city: String
+//    let city: String
+//    let address: String
+//    let dateOfBirth: String
+//    let dateOfPassing: String
+//    let placeOfPassing: String
+//    let reasonOfPassing: String
 //    let officialStone: Bool
 //    let address: String
 //    let name: String
@@ -60,29 +65,43 @@ class ViewModel: ObservableObject{
 
 struct HomeView: View {
     @StateObject var viewModel = ViewModel()
+    
     var body: some View {
-        NavigationView{
-            List{
-                ForEach(viewModel.victims, id: \.self){ victim in
-                    
-                    HStack{
-                        Image("")
-                            .frame(width: 130, height: 70)
-                            .background(Color.gray)
+        VStack {
+            Text("Stolperstein of the Day")
+                .font(.title3)
+                .foregroundColor(Color(hex: "7F462C"))
+                .bold()
+            
+            CandleLightningView()
+            
+            NavigationView {
+                List(viewModel.victims.prefix(10), id: \.self) { victim in
+                    HStack {
+                        Image("NoPicture")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 40, height: 40)
+                        
                         Text(victim.name)
                             .bold()
                     }
                     .padding(3)
+                }.scrollContentBackground(.hidden)
+                    .background(Color(red:0.988, green: 0.961, blue: 0.941))
+                .navigationTitle("Stolpersteine")  .foregroundColor(Color(hex: "7F462C"))
+                .onAppear {
+                    viewModel.fetch()
                 }
             }
-            .navigationTitle("Victims")
-            .onAppear{
+            
                 
-                viewModel.fetch()
-            }
-        }
+        }.background(Color(red:0.988, green: 0.961, blue: 0.941))
+        
+           
     }
 }
+
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {

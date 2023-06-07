@@ -66,7 +66,6 @@ struct FAQView: View {
         .background(Color(red:0.988, green: 0.961, blue: 0.941))    }
 }
 
-
 extension Color {
     init(hex: String) {
         var hexString = hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
@@ -80,9 +79,6 @@ extension Color {
         self.init(red: red, green: green, blue: blue)
     }
 }
-
-
-
 
 struct FaqView: View {
     var body: some View {
