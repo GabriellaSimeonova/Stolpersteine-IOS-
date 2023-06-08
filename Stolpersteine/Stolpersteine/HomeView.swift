@@ -77,7 +77,7 @@ struct HomeView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     VStack(alignment: .leading){
-                        Text("List 1")
+                        Text("Closest to you")
                             .font(.title2)
                             .bold()
                             .foregroundColor(Color(hex: "7F462C"))
@@ -113,7 +113,7 @@ struct HomeView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     VStack(alignment: .leading) {
-                        Text("List 2")
+                        Text("Passed away on this day")
                             .font(.title2)
                             .bold()
                             .foregroundColor(Color(hex: "7F462C"))
