@@ -9,19 +9,14 @@ import SwiftUI
 
 struct Victim: Hashable,  Codable{
     let name: String
-//    let city: String
-//    let address: String
-//    let dateOfBirth: String
-//    let dateOfPassing: String
-//    let placeOfPassing: String
-//    let reasonOfPassing: String
+    let city: String
+    let address: String
+    let dateOfBirth: String?
+    let dateOfPassing: String?
+    let placeOfPassing: String?
+    let reasonOfPassing: String?
 //    let officialStone: Bool
 //    let address: String
-//    let name: String
-//    let dateOfBirth: String
-//    let dateOfPassing: String
-//    let placeOfPassing: String
-//    let reasonOfPassing: String
 //    let gender: String
 //    let photo: String
 //    let url: String
@@ -29,78 +24,132 @@ struct Victim: Hashable,  Codable{
 //    let mapUrl: String
 }
 
-class ViewModel: ObservableObject{
+class ViewModel: ObservableObject {
     @Published var victims: [Victim] = []
     
-    func fetch(){
-        
-        guard let url = URL(string: "https://api.struikelstenengids.nl/v2/export/stones?secret=yONOtKGoGO9u9O8pC247jKl9NcDxEl54C2b8N06nzgF9WR6S1I&fbclid=IwAR2JETryTuv4SY-SBm6PoPOrSkhbPWJ2tUDl724lFkqn25jFYz82Oc5Pk1c")else {
+    func fetch() {
+        guard let url = URL(string: "https://api.struikelstenengids.nl/v2/export/stones?secret=yONOtKGoGO9u9O8pC247jKl9NcDxEl54C2b8N06nzgF9WR6S1I&fbclid=IwAR2JETryTuv4SY-SBm6PoPOrSkhbPWJ2tUDl724lFkqn25jFYz82Oc5Pk1c") else {
             return
-            
         }
-            
-            let task = URLSession.shared.dataTask(with: url) {[weak self] data, _,
-                error in
-                guard let data = data, error == nil else{
-                    return
-                }
-                
-                //convert data
-                
-                do{
-                    let victims = try
-                    JSONDecoder().decode([Victim].self, from: data)
-                    DispatchQueue.main.async {
-                        self?.victims = victims
-                    }
-                }
-                catch{
-                    print(error)
-                }
+        
+        let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
+            guard let data = data, error == nil else {
+                return
             }
+            
+            do {
+                let victims = try JSONDecoder().decode([Victim].self, from: data)
+                DispatchQueue.main.async {
+                    self?.victims = victims
+//                    if let firstVictim = victims.first {
+//                        print("Address: \(type(of: firstVictim.address))")
+//                        print("reasonOfPassing: \(type(of: firstVictim.reasonOfPassing))")
+//                        print("dateOfBirth: \(type(of: firstVictim.dateOfBirth))")
+//                        print("dateOfPassing: \(type(of: firstVictim.dateOfPassing))")
+//                        print("placeOfPassing: \(type(of: firstVictim.placeOfPassing))")
+//
+//                    }
+                }
+            } catch {
+                print(error)
+            }
+        }
         task.resume()
     }
 }
+
 
 
 struct HomeView: View {
     @StateObject var viewModel = ViewModel()
     
     var body: some View {
-        VStack {
-            Text("Stolperstein of the Day")
-                .font(.title3)
-                .foregroundColor(Color(hex: "7F462C"))
-                .bold()
-            
-            CandleLightningView()
-            
-            NavigationView {
-                List(viewModel.victims.prefix(10), id: \.self) { victim in
-                    HStack {
-                        Image("NoPicture")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 40, height: 40)
-                        
-                        Text(victim.name)
+        NavigationView {
+            VStack {
+                Text("Stolperstein of the Day")
+                    .font(.title)
+                    .foregroundColor(Color(hex: "7F462C"))
+                    .bold()
+                    .padding(.top)
+                
+                CandleLightningView()
+
+                
+                ScrollView(.horizontal, showsIndicators: false) {
+                    VStack(alignment: .leading){
+                        Text("List 1")
+                            .font(.title2)
                             .bold()
+                            .foregroundColor(Color(hex: "7F462C"))
+                            .padding(.bottom)
+                        
+                        LazyHStack(spacing: 10) {
+                            ForEach(viewModel.victims.prefix(5), id: \.self) { victim in
+                                NavigationLink(destination: StoneProfileView()) {
+                                    VStack {
+                                        Image("NoPicture")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: 80, height: 80)
+                                        
+                                        Text(victim.name)
+                                            .bold()
+                                            .multilineTextAlignment(.center)
+                                    }
+                                    .padding(10)
+                                    .background(Color.white)
+                                    .cornerRadius(10)
+                                }
+                            }
+                        }
                     }
-                    .padding(3)
-                }.scrollContentBackground(.hidden)
-                    .background(Color(red:0.988, green: 0.961, blue: 0.941))
-                .navigationTitle("Stolpersteine")  .foregroundColor(Color(hex: "7F462C"))
+                    .padding()
+                }
+                .background(Color(red: 0.988, green: 0.961, blue: 0.941))
+                .foregroundColor(Color(hex: "7F462C"))
                 .onAppear {
                     viewModel.fetch()
                 }
-            }
-            
                 
-        }.background(Color(red:0.988, green: 0.961, blue: 0.941))
-        
-           
+                ScrollView(.horizontal, showsIndicators: false) {
+                    VStack(alignment: .leading) {
+                        Text("List 2")
+                            .font(.title2)
+                            .bold()
+                            .foregroundColor(Color(hex: "7F462C"))
+                            .padding(.bottom)
+                        
+                        LazyHStack(spacing: 10) {
+                            ForEach(viewModel.victims.suffix(5), id: \.self) { victim in
+                                NavigationLink(destination: StoneProfileView()) {
+                                    VStack {
+                                        Image("NoPicture")
+                                            .resizable()
+                                            .aspectRatio(contentMode: .fit)
+                                            .frame(width: 80, height: 80)
+                                        
+                                        Text(victim.name)
+                                            .bold()
+                                            .multilineTextAlignment(.center)
+                                    }
+                                    .padding(10)
+                                    .background(Color.white)
+                                    .cornerRadius(10)
+                                }
+                            }
+                        }
+                    }
+                    .padding()
+                }
+                .background(Color(red: 0.988, green: 0.961, blue: 0.941))
+                .foregroundColor(Color(hex: "7F462C"))
+            }
+            .background(Color(red: 0.988, green: 0.961, blue: 0.941))
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
+
 
 
 struct HomeView_Previews: PreviewProvider {
