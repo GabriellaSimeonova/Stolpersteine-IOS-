@@ -14,6 +14,8 @@
 		3037A0872A2F52D700986F7D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037A0862A2F52D700986F7D /* MapView.swift */; };
 		3037A0892A2F52E100986F7D /* FaqView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037A0882A2F52E100986F7D /* FaqView.swift */; };
 		3037A08B2A2F52FA00986F7D /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037A08A2A2F52FA00986F7D /* UserProfileView.swift */; };
+		30BD5E662A31E18A000C3384 /* PlayStoryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BD5E652A31E18A000C3384 /* PlayStoryButtonView.swift */; };
+		30BD5E682A31E199000C3384 /* ProfileCandleLightningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BD5E672A31E199000C3384 /* ProfileCandleLightningView.swift */; };
 		756F84A72A31C7D000199B14 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756F84A62A31C7D000199B14 /* LoadingView.swift */; };
 		F92EAA0C2A2F406100C3F1F3 /* StolpersteineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EAA0B2A2F406100C3F1F3 /* StolpersteineApp.swift */; };
 		F92EAA0E2A2F406100C3F1F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EAA0D2A2F406100C3F1F3 /* ContentView.swift */; };
@@ -29,6 +31,8 @@
 		3037A0862A2F52D700986F7D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		3037A0882A2F52E100986F7D /* FaqView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqView.swift; sourceTree = "<group>"; };
 		3037A08A2A2F52FA00986F7D /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		30BD5E652A31E18A000C3384 /* PlayStoryButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayStoryButtonView.swift; sourceTree = "<group>"; };
+		30BD5E672A31E199000C3384 /* ProfileCandleLightningView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCandleLightningView.swift; sourceTree = "<group>"; };
 		756F84A62A31C7D000199B14 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		F92EAA082A2F406100C3F1F3 /* Stolpersteine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stolpersteine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F92EAA0B2A2F406100C3F1F3 /* StolpersteineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StolpersteineApp.swift; sourceTree = "<group>"; };
@@ -52,6 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				301D88442A30E68C0007C461 /* CandleLightningView.swift */,
+				30BD5E672A31E199000C3384 /* ProfileCandleLightningView.swift */,
+				30BD5E652A31E18A000C3384 /* PlayStoryButtonView.swift */,
 				301D88462A30E93F0007C461 /* LightTheCandleButtonView.swift */,
 				756F84A62A31C7D000199B14 /* LoadingView.swift */,
 			);
@@ -176,6 +182,8 @@
 				F92EAA0E2A2F406100C3F1F3 /* ContentView.swift in Sources */,
 				3037A0872A2F52D700986F7D /* MapView.swift in Sources */,
 				3037A0892A2F52E100986F7D /* FaqView.swift in Sources */,
+				30BD5E662A31E18A000C3384 /* PlayStoryButtonView.swift in Sources */,
+				30BD5E682A31E199000C3384 /* ProfileCandleLightningView.swift in Sources */,
 				3037A0852A2F52C000986F7D /* StoneProfileView.swift in Sources */,
 				F92EAA0C2A2F406100C3F1F3 /* StolpersteineApp.swift in Sources */,
 				301D88472A30E93F0007C461 /* LightTheCandleButtonView.swift in Sources */,
