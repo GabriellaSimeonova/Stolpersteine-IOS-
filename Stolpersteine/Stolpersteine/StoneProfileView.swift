@@ -22,6 +22,7 @@ struct StoneProfileView: View {
                         .bold()
                         .foregroundColor(Color(hex: "7F462C"))
                     
+                    
                     if let dateOfBirth = victim.dateOfBirth {
                         Text("Date of Birth: \(dateOfBirth)")
                             .bold()
@@ -52,18 +53,20 @@ struct StoneProfileView: View {
     }
 }
 
-struct StoneProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        let victim = Victim(
-            name: "John Doe",
-            city: "Example City",
-            address: "Example Address",
-            dateOfBirth: "01/01/1990",
-            dateOfPassing: "01/01/2023",
-            placeOfPassing: "Example Place",
-            reasonOfPassing: "Example Reason"
-        )
-        
-        StoneProfileView(victim: victim)
-    }
-}
+//struct StoneProfileView_Previews: PreviewProvider {
+//    static var previews: some View {
+////        let victim = Victim(
+////            name: "John Doe",
+////            city: "Example City",
+////            address: "Example Address",
+////            dateOfBirth: "01/01/1990",
+////            dateOfPassing: "01/01/2023",
+////            placeOfPassing: "Example Place",
+////            reasonOfPassing: "Example Reason",
+////            longitude: 0.0,
+////            latitude: 0.0
+////        )
+//
+//        StoneProfileView(victim: victim)
+//    }
+//}

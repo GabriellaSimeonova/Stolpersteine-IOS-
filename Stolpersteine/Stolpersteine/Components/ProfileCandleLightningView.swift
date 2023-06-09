@@ -21,6 +21,7 @@ struct ProfileCandleLightningView: View {
             VStack{
                 VStack(alignment: .center){
                     Text(victim.name).foregroundColor(Color(hex: "F1D0B5")).padding(.bottom).font(.title)
+                    
                 }
                
 
@@ -40,17 +41,18 @@ struct ProfileCandleLightningView: View {
 
 
 
-struct ProfileCandleLightningView_Previews: PreviewProvider {
-    static var previews: some View {
-        let victim = Victim(
-            name: "John Doe",
-            city: "Example City",
-            address: "Example Address",
-            dateOfBirth: "01/01/1990",
-            dateOfPassing: "01/01/2023",
-            placeOfPassing: "Example Place",
-            reasonOfPassing: "Example Reason"
-        )
-        ProfileCandleLightningView(victim: victim)
-    }
-}
+//struct ProfileCandleLightningView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        let victim = Victim(
+//            id: 1,from: Decoder,
+//            name: "John Doe",
+//            city: "Example City",
+//            address: "Example Address",
+//            dateOfBirth: "01/01/1990",
+//            dateOfPassing: "01/01/2023",
+//            placeOfPassing: "Example Place",
+//            reasonOfPassing: "Example Reason"
+//        )
+//        ProfileCandleLightningView(victim: victim)
+//    }
+//}

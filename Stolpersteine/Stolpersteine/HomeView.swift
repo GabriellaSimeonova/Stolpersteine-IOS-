@@ -160,8 +160,10 @@
 
 
 import SwiftUI
+import CoreLocation
 
-struct Victim: Hashable, Codable {
+struct Victim: Hashable, Codable, Identifiable {
+    let id: Int
     let name: String
     let city: String
     let address: String
@@ -169,6 +171,20 @@ struct Victim: Hashable, Codable {
     let dateOfPassing: String?
     let placeOfPassing: String?
     let reasonOfPassing: String?
+    
+    private var location: Coordinates
+
+       struct Coordinates: Hashable, Codable {
+           var lat: Double
+           var long: Double
+       }
+    
+    
+       var locationCoordinate: CLLocationCoordinate2D {
+           CLLocationCoordinate2D(
+               latitude: location.lat,
+               longitude: location.long)
+       }
 }
 
 class ViewModel: ObservableObject {
@@ -241,7 +257,7 @@ struct HomeView: View {
                                                         .resizable()
                                                         .aspectRatio(contentMode: .fit)
                                                         .frame(width: 80, height: 80)
-                                                    
+
                                                     Text(victim.name)
                                                         .bold()
                                                         .multilineTextAlignment(.center)

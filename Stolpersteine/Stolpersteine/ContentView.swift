@@ -6,10 +6,25 @@
 //
 
 import SwiftUI
-
+import CoreLocation
 
 
 struct ContentView: View {
+    
+   
+
+       struct Coordinates: Hashable, Codable {
+           var lat: Double
+           var long: Double
+       }
+    
+    
+       var locationCoordinate: CLLocationCoordinate2D {
+           CLLocationCoordinate2D(
+               latitude: 51.4381,
+               longitude: 5.4752)
+       }
+   
     var body: some View {
         TabView{
             HomeView()
@@ -17,7 +32,7 @@ struct ContentView: View {
                 Image(systemName: "house")
                 Text("Home")
             }
-            MapView()
+            MapView(coordinate: locationCoordinate)
                 .tabItem(){
                 Image(systemName: "map")
                 Text("Map")
