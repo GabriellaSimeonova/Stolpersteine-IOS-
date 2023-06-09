@@ -326,33 +326,46 @@ struct HomeView: View {
 }
 
 struct EmptyViewWithLoader: View {
+    @State private var offsetY: CGFloat = 0
+    
     var body: some View {
+        
         GeometryReader { geometry in
             ZStack {
                 Color(red: 0.988, green: 0.961, blue: 0.941)
                 
                 VStack {
-                    ProgressView()
-                        .padding(.vertical, 20)
+                    //                    ProgressView()
+                    //                        .padding(.vertical, 20)
+                    
+                    Image("logo")
+                        .resizable()
+                        .frame(width: 300, height: 200)
+                        .padding(.leading, -20)
+                        .offset(y: offsetY)
                 }
+                .onAppear {
+                    withAnimation(Animation.easeInOut(duration: 0.5).repeatForever()) {
+                        offsetY -= 10
+                    }
+                }
+                .frame(width: geometry.size.width, height: geometry.size.height)
             }
-            .frame(width: geometry.size.width, height: geometry.size.height)
+            .ignoresSafeArea()
         }
-        .ignoresSafeArea()
     }
-}
-
-//struct StoneProfileView: View {
-//    // Rest of the code for StoneProfileView
-//}
-//
-//struct CandleLightningView: View {
-//    // Rest of the code for CandleLightningView
-//}
-
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-    }
-}
+    
+    //struct StoneProfileView: View {
+    //    // Rest of the code for StoneProfileView
+    //}
+    //
+    //struct CandleLightningView: View {
+    //    // Rest of the code for CandleLightningView
+    //}
+    
+    struct HomeView_Previews: PreviewProvider {
+        static var previews: some View {
+            HomeView()
+        }
+    }}
 
