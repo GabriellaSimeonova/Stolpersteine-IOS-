@@ -161,6 +161,7 @@
 
 import SwiftUI
 import CoreLocation
+import MapKit
 
 struct Victim: Hashable, Codable, Identifiable {
     let id: Int
@@ -172,19 +173,20 @@ struct Victim: Hashable, Codable, Identifiable {
     let placeOfPassing: String?
     let reasonOfPassing: String?
     
-    private var location: Coordinates
+    var location: Coordinates
 
-       struct Coordinates: Hashable, Codable {
-           var lat: Double
-           var long: Double
-       }
-    
-    
-       var locationCoordinate: CLLocationCoordinate2D {
-           CLLocationCoordinate2D(
-               latitude: location.lat,
-               longitude: location.long)
-       }
+    struct Coordinates: Hashable, Codable {
+        var lat: Double
+        var long: Double
+
+        var coordinate: CLLocationCoordinate2D {
+            CLLocationCoordinate2D(latitude: lat, longitude: long)
+        }
+    }
+
+    var locationCoordinate: CLLocationCoordinate2D {
+        location.coordinate
+    }
 }
 
 class ViewModel: ObservableObject {
