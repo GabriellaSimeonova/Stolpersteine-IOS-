@@ -47,6 +47,7 @@ struct StoneProfileView: View {
                             .bold()
                             .foregroundColor(Color(hex: "7F462C"))
                         
+                        
                         if let dateOfBirth = victim.dateOfBirth {
                             Text("Date of Birth: \(dateOfBirth)")
                                 .bold()
