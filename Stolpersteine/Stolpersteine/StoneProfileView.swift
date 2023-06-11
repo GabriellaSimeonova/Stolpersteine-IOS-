@@ -6,23 +6,46 @@
 //
 
 import SwiftUI
+import OpenAISwift
+
+final class InfoPageViewModel: ObservableObject {
+    private var client: OpenAISwift?
+
+    init() {
+        client = OpenAISwift(authToken: Secret.yourOpenAIAPIKey) //API key is protected, please use your own
+    }
+
+    func send(text: String, completion: @escaping (String) -> Void) {
+        client?.sendCompletion(with: text, maxTokens: 500) { result in
+            switch result {
+            case .success(let model):
+                let output = model.choices?.first?.text ?? ""
+                completion(output)
+            case .failure:
+                break
+            }
+        }
+    }
+}
+
 
 struct StoneProfileView: View {
+    @StateObject private var viewModel = InfoPageViewModel()
+    @State private var povResponse = ""
     let victim: Victim
     
     var body: some View {
-        ScrollView{
+        ScrollView {
             VStack {
                 ProfileCandleLightningView(victim: victim)
-                HStack{
-                    VStack(alignment: .leading){
+                HStack {
+                    VStack(alignment: .leading) {
                         Text("City: \(victim.city)")
                             .bold()
                             .foregroundColor(Color(hex: "7F462C"))
                         Text("Address: \(victim.address)")
                             .bold()
                             .foregroundColor(Color(hex: "7F462C"))
-                        
                         
                         if let dateOfBirth = victim.dateOfBirth {
                             Text("Date of Birth: \(dateOfBirth)")
@@ -51,16 +74,34 @@ struct StoneProfileView: View {
                     PlayStoryButtonView()
                 }
                 
-                //Story of the victim
-                VStack{
-                    Text("As I sit here in the attic, pen in hand, I feel compelled to share the essence of my story. My name is Anne Frank, and I am a young Jewish girl living in Amsterdam during World War II. ").bold().padding(.top).foregroundColor(Color(hex: "7F462C"))
-                    Text("Forced into hiding with my family, we seek solace behind the bookcase of a secret annex. Within these confined walls, I pour my heart into my diary, finding solace in its pages. Through my words, I recount the indomitable spirit that keeps us alive, the bonds formed amidst fear, and the unyielding hope for a better future. This is my tale of resilience, love, and the unwavering belief that even in the darkest of times, kindness and humanity can prevail.").foregroundColor(Color(hex: "7F462C"))
-                }.padding(
-                )}.padding().background(Color(red: 0.988, green: 0.961, blue: 0.941))
-        }.padding().background(Color(red: 0.988, green: 0.961, blue: 0.941))
-        
+                // Story of the victim
+                VStack {
+                    POVView(povText: povResponse).foregroundColor(Color(hex: "7F462C"))
+                }.padding()
+            }
+            .padding()
+            .background(Color(red: 0.988, green: 0.961, blue: 0.941))
+        }
+        .onAppear {
+            fetchPOV()
+        }
+        .padding()
+        .background(Color(red: 0.988, green: 0.961, blue: 0.941))
     }
+    
+    private func fetchPOV() {
+        viewModel.send(text: "Can you tell the story of \(victim.name) (Holocaust victim) in first person, lived in \(victim.city), between \(victim.dateOfBirth) and \(victim.dateOfPassing)?")
+ { response in
+                DispatchQueue.main.async {
+                    povResponse = response
+                    
+                }
+            }
+        }
 }
+
+
+//viewModel.send(text: "Can you tell the story of \(victim.name) (Holocaust victim) in first person, lived in \(victim.city), between \(victim.dateOfBirth) and \(victim.dateOfPassing)?")
 
 struct StoneProfileView_Previews: PreviewProvider {
     static var previews: some View {
@@ -77,5 +118,28 @@ struct StoneProfileView_Previews: PreviewProvider {
         )
         
         return StoneProfileView(victim: victim)
+    }
+}
+
+struct POVView: View {
+    let povText: String
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 15) {
+            HStack(spacing: 12) {
+                Text("Author's POV:")
+                    .font(.title)
+                    .bold()
+                    .multilineTextAlignment(.center)
+            }
+            HStack(spacing: 12) {
+                Text(povText)
+                    .multilineTextAlignment(.center)
+                    .padding(.bottom, 50)
+            }
+        }
+        .padding()
+        .background(Color.white)
+        .cornerRadius(15)
     }
 }
