@@ -14,6 +14,8 @@
 		3037A0872A2F52D700986F7D /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037A0862A2F52D700986F7D /* MapView.swift */; };
 		3037A0892A2F52E100986F7D /* FaqView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037A0882A2F52E100986F7D /* FaqView.swift */; };
 		3037A08B2A2F52FA00986F7D /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037A08A2A2F52FA00986F7D /* UserProfileView.swift */; };
+		3088280F2A35CCDC00014B79 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3088280E2A35CCDC00014B79 /* OpenAISwift */; };
+		308828112A35D46500014B79 /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = 308828102A35D46500014B79 /* Secret.swift */; };
 		30BD5E662A31E18A000C3384 /* PlayStoryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BD5E652A31E18A000C3384 /* PlayStoryButtonView.swift */; };
 		30BD5E682A31E199000C3384 /* ProfileCandleLightningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BD5E672A31E199000C3384 /* ProfileCandleLightningView.swift */; };
 		756F84A72A31C7D000199B14 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756F84A62A31C7D000199B14 /* LoadingView.swift */; };
@@ -31,6 +33,7 @@
 		3037A0862A2F52D700986F7D /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		3037A0882A2F52E100986F7D /* FaqView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaqView.swift; sourceTree = "<group>"; };
 		3037A08A2A2F52FA00986F7D /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		308828102A35D46500014B79 /* Secret.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		30BD5E652A31E18A000C3384 /* PlayStoryButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayStoryButtonView.swift; sourceTree = "<group>"; };
 		30BD5E672A31E199000C3384 /* ProfileCandleLightningView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCandleLightningView.swift; sourceTree = "<group>"; };
 		756F84A62A31C7D000199B14 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3088280F2A35CCDC00014B79 /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +92,7 @@
 				F92EAA0D2A2F406100C3F1F3 /* ContentView.swift */,
 				3037A0822A2F52AF00986F7D /* HomeView.swift */,
 				3037A0842A2F52C000986F7D /* StoneProfileView.swift */,
+				308828102A35D46500014B79 /* Secret.swift */,
 				3037A0862A2F52D700986F7D /* MapView.swift */,
 				3037A0882A2F52E100986F7D /* FaqView.swift */,
 				3037A08A2A2F52FA00986F7D /* UserProfileView.swift */,
@@ -121,6 +126,9 @@
 			dependencies = (
 			);
 			name = Stolpersteine;
+			packageProductDependencies = (
+				3088280E2A35CCDC00014B79 /* OpenAISwift */,
+			);
 			productName = Stolpersteine;
 			productReference = F92EAA082A2F406100C3F1F3 /* Stolpersteine.app */;
 			productType = "com.apple.product-type.application";
@@ -149,6 +157,9 @@
 				Base,
 			);
 			mainGroup = F92EA9FF2A2F406100C3F1F3;
+			packageReferences = (
+				3088280D2A35CCDC00014B79 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = F92EAA092A2F406100C3F1F3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -184,6 +195,7 @@
 				3037A0892A2F52E100986F7D /* FaqView.swift in Sources */,
 				30BD5E662A31E18A000C3384 /* PlayStoryButtonView.swift in Sources */,
 				30BD5E682A31E199000C3384 /* ProfileCandleLightningView.swift in Sources */,
+				308828112A35D46500014B79 /* Secret.swift in Sources */,
 				3037A0852A2F52C000986F7D /* StoneProfileView.swift in Sources */,
 				F92EAA0C2A2F406100C3F1F3 /* StolpersteineApp.swift in Sources */,
 				301D88472A30E93F0007C461 /* LightTheCandleButtonView.swift in Sources */,
@@ -387,6 +399,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3088280D2A35CCDC00014B79 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3088280E2A35CCDC00014B79 /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3088280D2A35CCDC00014B79 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F92EAA002A2F406100C3F1F3 /* Project object */;
 }
