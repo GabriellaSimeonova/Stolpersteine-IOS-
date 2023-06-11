@@ -10,7 +10,7 @@ import SwiftUI
 struct UserProfileView: View {
     @State private var isSheetPresented = false
     
-    
+    let darkBrown = Color(hex: "7F462C")
     
     var body: some View {
         VStack(spacing: 20) {
@@ -27,7 +27,7 @@ struct UserProfileView: View {
             
     }
     
-            CircleView(title: "Stones Visited", number: "1", color: Color.red)
+            CircleView(title: "Stones Visited", number: "1", color: darkBrown)
                             .onTapGesture {
                                 isSheetPresented = true
                             }
