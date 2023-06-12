@@ -23,25 +23,25 @@ struct CandleLightningView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 15))
                 )
 
-            VStack {
+            VStack(alignment: .center) {
                 VStack(alignment: .trailing) {
                     Text("Annelies Marie Frank")
                         .padding()
                         .foregroundColor(Color(hex: "F1D0B5"))
                         .padding(.top)
                         .font(.title)
-                    Text("Date of birth: 12-06-1929")
+                    Text("Born: 12-06-1929")
                         .foregroundColor(Color(hex: "F1D0B5"))
-                    Text("Date of passing: 31-03-1945")
+                    Text("Passed: 31-03-1945")
                         .foregroundColor(Color(hex: "F1D0B5"))
-                    Text("Place of death: Bergen-Belsen")
+                    Text("Place of death: \n Bergen-Belsen")
                         .foregroundColor(Color(hex: "F1D0B5"))
-                    Text("Cause of prosecution: Jewish")
+                    Text("Cause of prosecution: \n Jewish") .multilineTextAlignment(.trailing)
                         .foregroundColor(Color(hex: "F1D0B5"))
                 }
 
                 if !isCandleLit {
-                    LightTheCandleButtonView(isCandleLit: $isCandleLit)
+                    LightTheCandleButtonView(isCandleLit: $isCandleLit).padding(.bottom)
                 } else {
                     LightTheCandleButtonView(isCandleLit: $isCandleLit).opacity(0)
                 }

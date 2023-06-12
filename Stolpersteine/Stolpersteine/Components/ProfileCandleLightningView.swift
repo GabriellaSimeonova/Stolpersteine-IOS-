@@ -11,7 +11,7 @@ struct ProfileCandleLightningView: View {
     @State private var isCandleLit = false // New state variable
 
     var body: some View {
-        ZStack(alignment: .trailing) {
+        ZStack(alignment: .center) {
             RoundedRectangle(cornerRadius: 15) // Use RoundedRectangle instead of Image
                 // Set the background color of the rectangle
                 .frame(width: UIScreen.main.bounds.width * 0.9, height: 300) // Adjust the width and height of the rectangle
@@ -22,20 +22,19 @@ struct ProfileCandleLightningView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 15))
                 )
 
-            VStack {
-                VStack(alignment: .leading) {
+            VStack(alignment: .center, spacing: 60) {
+                VStack(alignment: .center, spacing: 10) {
                     Text(victim.name)
-                        .padding()
+                        .padding(.bottom)
                         .foregroundColor(Color(hex: "F1D0B5"))
-                        .padding(.top)
-                        .font(.title)
+                        .font(.largeTitle)
 
                 }
 
                 if !isCandleLit {
-                    LightTheCandleButtonView(isCandleLit: $isCandleLit)
+                    LightTheCandleButtonView(isCandleLit: $isCandleLit).padding(.top)
                 } else {
-                    LightTheCandleButtonView(isCandleLit: $isCandleLit).opacity(0)
+                    LightTheCandleButtonView(isCandleLit: $isCandleLit).opacity(0).padding(.top)
                 }
             }
             .padding() // Add padding inside the rectangle
@@ -50,18 +49,20 @@ struct ProfileCandleLightningView: View {
 
 
 
-//struct ProfileCandleLightningView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        let victim = Victim(
-//            id: 1,from: Decoder,
-//            name: "John Doe",
-//            city: "Example City",
-//            address: "Example Address",
-//            dateOfBirth: "01/01/1990",
-//            dateOfPassing: "01/01/2023",
-//            placeOfPassing: "Example Place",
-//            reasonOfPassing: "Example Reason"
-//        )
-//        ProfileCandleLightningView(victim: victim)
-//    }
-//}
+struct ProfileCandleLightningView_Previews: PreviewProvider {
+    static var previews: some View {
+        let victim = Victim(
+            id: 1,
+            name: "John Doe",
+            city: "Example City",
+            address: "Example Address",
+            dateOfBirth: "01/01/1990",
+            dateOfPassing: "01/01/2023",
+            placeOfPassing: "Example Place",
+            reasonOfPassing: "Example Reason",
+            location: Victim.Coordinates(lat: 0, long: 0)
+        )
+        
+        return StoneProfileView(victim: victim)
+    }
+}

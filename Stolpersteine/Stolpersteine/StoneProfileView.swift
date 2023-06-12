@@ -91,7 +91,7 @@ struct StoneProfileView: View {
     }
     
     private func fetchPOV() {
-        viewModel.send(text: "Can you tell the story of \(victim.name) (Holocaust victim) in first person, lived in \(victim.city), between \(victim.dateOfBirth) and \(victim.dateOfPassing)?")
+        viewModel.send(text: "Can you tell the story of \(victim.name) (Holocaust victim) in first person, lived in \(victim.city), between \(victim.dateOfBirth) and \(victim.dateOfPassing)? Make it short but touching story, 1 paragraph with most important info")
  { response in
                 DispatchQueue.main.async {
                     povResponse = response
@@ -135,7 +135,8 @@ struct POVView: View {
             }
             HStack(spacing: 12) {
                 Text(povText)
-                    .multilineTextAlignment(.center)
+                    .frame(maxWidth: .infinity)
+                    .multilineTextAlignment(.leading)
                     .padding(.bottom, 50)
             }
         }

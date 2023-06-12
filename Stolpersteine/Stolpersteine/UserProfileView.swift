@@ -11,6 +11,10 @@ struct UserProfileView: View {
     @State private var isSheetPresented = false
     
     let darkBrown = Color(hex: "7F462C")
+    let brown2 = Color(hex: "C67F59")
+    let brown3 = Color(hex: "D89B78")
+
+
     
     var body: some View {
         VStack(spacing: 20) {
@@ -34,20 +38,20 @@ struct UserProfileView: View {
                             .sheet(isPresented: $isSheetPresented) {
                                 Text("Stones Visited Sheet")
                             }
-            CircleView(title: "Candles Lit", number: "3", color: Color.blue)
-                            .onTapGesture {
-                                isSheetPresented = true
-                            }
-                            .sheet(isPresented: $isSheetPresented) {
-                                Text("Stones Visited Sheet")
-                            }
-                        
-            CircleView(title: "Stones Saved", number: "0", color: Color.purple)
+            CircleView(title: "Candles Lit", number: "3", color: brown2)
                             .onTapGesture {
                                 isSheetPresented = true
                             }
                             .sheet(isPresented: $isSheetPresented) {
                                 Text("Candles Lit Sheet")
+                            }
+                        
+            CircleView(title: "Stones Saved", number: "0", color: brown3)
+                            .onTapGesture {
+                                isSheetPresented = true
+                            }
+                            .sheet(isPresented: $isSheetPresented) {
+                                Text("Stones Saved")
                             }
         }.padding(.top, -90)
                .padding()

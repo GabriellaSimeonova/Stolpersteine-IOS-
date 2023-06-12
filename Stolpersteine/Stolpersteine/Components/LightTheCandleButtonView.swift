@@ -16,17 +16,11 @@ struct LightTheCandleButtonView: View {
                isCandleLit.toggle() 
         }) {
             VStack (spacing: 5){
-                Text("Light")
-                    .font(.headline)
-                    .foregroundColor(Color(hex: "7F462C"))
-                Text("candle")
-                    .font(.headline)
-                    .foregroundColor(Color(hex: "7F462C"))
                 
                 Image(systemName: "flame.fill")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .frame(width: 30, height: 30)
+                    .frame(width: 40, height: 40)
                     .foregroundColor(Color(hex: "7F462C"))
              
             }
