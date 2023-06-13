@@ -19,6 +19,8 @@
 		30BD5E662A31E18A000C3384 /* PlayStoryButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BD5E652A31E18A000C3384 /* PlayStoryButtonView.swift */; };
 		30BD5E682A31E199000C3384 /* ProfileCandleLightningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BD5E672A31E199000C3384 /* ProfileCandleLightningView.swift */; };
 		756F84A72A31C7D000199B14 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756F84A62A31C7D000199B14 /* LoadingView.swift */; };
+		756F84B82A38854E00199B14 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 756F84BA2A38854E00199B14 /* Localizable.strings */; };
+		756F84C02A3890F700199B14 /* LanguageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756F84BF2A3890F700199B14 /* LanguageManager.swift */; };
 		F92EAA0C2A2F406100C3F1F3 /* StolpersteineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EAA0B2A2F406100C3F1F3 /* StolpersteineApp.swift */; };
 		F92EAA0E2A2F406100C3F1F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F92EAA0D2A2F406100C3F1F3 /* ContentView.swift */; };
 		F92EAA102A2F406300C3F1F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F92EAA0F2A2F406300C3F1F3 /* Assets.xcassets */; };
@@ -37,6 +39,10 @@
 		30BD5E652A31E18A000C3384 /* PlayStoryButtonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayStoryButtonView.swift; sourceTree = "<group>"; };
 		30BD5E672A31E199000C3384 /* ProfileCandleLightningView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileCandleLightningView.swift; sourceTree = "<group>"; };
 		756F84A62A31C7D000199B14 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		756F84B92A38854E00199B14 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		756F84BD2A38858800199B14 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		756F84BE2A38859F00199B14 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		756F84BF2A3890F700199B14 /* LanguageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageManager.swift; sourceTree = "<group>"; };
 		F92EAA082A2F406100C3F1F3 /* Stolpersteine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stolpersteine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F92EAA0B2A2F406100C3F1F3 /* StolpersteineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StolpersteineApp.swift; sourceTree = "<group>"; };
 		F92EAA0D2A2F406100C3F1F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,6 +70,7 @@
 				30BD5E652A31E18A000C3384 /* PlayStoryButtonView.swift */,
 				301D88462A30E93F0007C461 /* LightTheCandleButtonView.swift */,
 				756F84A62A31C7D000199B14 /* LoadingView.swift */,
+				756F84BA2A38854E00199B14 /* Localizable.strings */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -71,6 +78,7 @@
 		F92EA9FF2A2F406100C3F1F3 = {
 			isa = PBXGroup;
 			children = (
+				756F84BF2A3890F700199B14 /* LanguageManager.swift */,
 				F92EAA0A2A2F406100C3F1F3 /* Stolpersteine */,
 				F92EAA092A2F406100C3F1F3 /* Products */,
 			);
@@ -155,6 +163,8 @@
 			knownRegions = (
 				en,
 				Base,
+				nl,
+				fr,
 			);
 			mainGroup = F92EA9FF2A2F406100C3F1F3;
 			packageReferences = (
@@ -175,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F92EAA132A2F406300C3F1F3 /* Preview Assets.xcassets in Resources */,
+				756F84B82A38854E00199B14 /* Localizable.strings in Resources */,
 				F92EAA102A2F406300C3F1F3 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -187,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3037A08B2A2F52FA00986F7D /* UserProfileView.swift in Sources */,
+				756F84C02A3890F700199B14 /* LanguageManager.swift in Sources */,
 				3037A0832A2F52AF00986F7D /* HomeView.swift in Sources */,
 				301D88452A30E68C0007C461 /* CandleLightningView.swift in Sources */,
 				756F84A72A31C7D000199B14 /* LoadingView.swift in Sources */,
@@ -204,11 +216,25 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		756F84BA2A38854E00199B14 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				756F84B92A38854E00199B14 /* en */,
+				756F84BD2A38858800199B14 /* nl */,
+				756F84BE2A38859F00199B14 /* fr */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		F92EAA142A2F406300C3F1F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -269,6 +295,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
