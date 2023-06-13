@@ -3,7 +3,7 @@
 //  Stolpersteine
 //
 //  Created by Gabriela Simeonova on 06/06/2023.
-//
+
 
 //import SwiftUI
 //
@@ -110,7 +110,6 @@ struct UserProfileView: View {
     @State private var isStonesSavedSheetPresented = false
     @State private var isLanguageSelectionSheetPresented = false
 
-    @State private var isExpanded = false
 //    @State  var language = Language.english
     @EnvironmentObject var languageManager:LanguageManager
 
@@ -118,35 +117,11 @@ struct UserProfileView: View {
     let brown2 = Color(hex: "C67F59")
     let brown3 = Color(hex: "D89B78")
 
-    var circleStack: some View {
-        VStack(spacing: 10) {
-            Circle().foregroundColor(Color.red).frame(width: 50, height: 50)
-
-            if isExpanded {
-                Spacer().frame(height: 10)
-
-                // Fixed-size container for expanded circles
-                VStack(spacing: 10) {
-                    Circle().foregroundColor(Color.red).frame(width: 50, height: 50)
-                    Circle().foregroundColor(Color.red).frame(width: 50, height: 50)
-                    Circle().foregroundColor(Color.red).frame(width: 50, height: 50)
-                }
-                .transition(.opacity) // Apply fade animation when expanding/collapsing
-                .animation(.default) // Apply default animation
-            }
-        }
-    }
+  
  
     var body: some View {
         VStack(spacing: 20) {
             ZStack(alignment: .topTrailing) {
-                circleStack
-                    .offset(x: 80, y: -30)
-                    .onTapGesture {
-                        withAnimation {
-                            isExpanded.toggle()
-                        }
-                    }
 
                 Text("profile".localized())
                     .font(.title2)
@@ -154,7 +129,7 @@ struct UserProfileView: View {
                     .padding()
             }
 
-            CircleView(title: NSLocalizedString("Stones Visited", comment: ""), number: "1", color: darkBrown)
+            CircleView(title:"Stones Visited".localized(), number: "1", color: darkBrown)
                 .onTapGesture {
                     isStonesVisitedSheetPresented = true
                 }
