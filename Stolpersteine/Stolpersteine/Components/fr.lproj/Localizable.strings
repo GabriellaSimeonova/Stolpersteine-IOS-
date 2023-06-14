@@ -38,3 +38,12 @@
 "FAQ" = "FAQ";
 "Profile" = "Profil";
 
+//Stone Profile
+"stone-city" = "Ville : ";
+"Address: %@" = "Adresse : %@";
+"Date of Birth: %@" = "Date de naissance : %@";
+"Date of Passing: %@" = "Date de décès : %@";
+"Place of Passing: %@" = "Lieu de décès : %@";
+"Reason of Passing: %@" = "Raison du décès : %@";
+"My Story:" = "Mon histoire :";
+

@@ -10,8 +10,8 @@ import SwiftUI
 
 struct FAQItem: Identifiable {
     let id = UUID()
-    let question: String
-    let answer: String
+    var question: String
+    var answer: String
     var isOpen: Bool = false
 }
 
@@ -28,8 +28,6 @@ struct FAQView: View {
 
     var body: some View {
         
-        
-        
         VStack {
             Text("faq.heading".localized())
                 .font(.headline)
@@ -41,7 +39,7 @@ struct FAQView: View {
                 ForEach(faqItems) { item in
                     DisclosureGroup(
                         content: {
-                            Text(item.answer)
+                            Text(item.answer.localized())
                                 .font(.body)
                                 .foregroundColor(.secondary)
                                 .padding(.vertical, 8)
@@ -50,7 +48,7 @@ struct FAQView: View {
                         },
                         label: {
                             HStack {
-                                Text(item.question)
+                                Text(item.question.localized())
                                     .font(.headline)
                                     .padding(.vertical, 8)
                                     .padding(.leading, 16)

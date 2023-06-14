@@ -34,13 +34,15 @@ struct StoneProfileView: View {
     @State private var povResponse = ""
     let victim: Victim
     
+    @EnvironmentObject var languageManager:LanguageManager
+    
     var body: some View {
         ScrollView {
             VStack {
                 ProfileCandleLightningView(victim: victim)
                 HStack {
                     VStack(alignment: .leading) {
-                        Text("City: \(victim.city)")
+                        Text("stone-city".localized() + "\(victim.city)")
                             .bold()
                             .foregroundColor(Color(hex: "7F462C"))
                         Text("Address: \(victim.address)")
