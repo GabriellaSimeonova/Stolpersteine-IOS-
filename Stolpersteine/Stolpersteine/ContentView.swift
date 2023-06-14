@@ -11,7 +11,7 @@ import CoreLocation
 
 struct ContentView: View {
     
-   
+    @EnvironmentObject var languageManager:LanguageManager
 
        struct Coordinates: Hashable, Codable {
            var lat: Double
@@ -30,22 +30,22 @@ struct ContentView: View {
             HomeView()
                 .tabItem(){
                 Image(systemName: "house")
-                Text("Home")
+                    Text("Home".localized())
             }
             MapView(coordinate: locationCoordinate)
                 .tabItem(){
                 Image(systemName: "map")
-                Text("Map")
+                    Text("Map".localized())
             }
             FaqView()
                 .tabItem(){
                 Image(systemName: "questionmark.bubble")
-                Text("FAQ")
+                    Text("FAQ".localized())
             }
             UserProfileView()
                 .tabItem(){
                 Image(systemName: "person")
-                Text("Profile")
+                    Text("Profile".localized())
             }
         }.accentColor(Color(hex: "7F462C"))
     }

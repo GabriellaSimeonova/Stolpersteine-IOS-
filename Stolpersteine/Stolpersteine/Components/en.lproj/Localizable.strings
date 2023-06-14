@@ -5,6 +5,37 @@
   Created by Tsveta Pandurska on 13/06/2023.
   
 */
-"profile" = "Your Profile";
+
+//Profile View
+"profile" = "Profile";
 "Stones Visited" = "Stones Visited";
 "Candles Lit" = "Candles Lit";
+"Stones Saved" = "Stones Saved";
+"Select Language" = "Select Language";
+"Stones Visited Sheet" = "Stones Visited Sheet";
+"Candles Lit Sheet" = "Candles Lit Sheet";
+"Stones Saved Sheet" = "Stones Saved Sheet";
+
+//Home View
+"Stolperstein of the Day" = "Stolperstein of the Day";
+"Closest to you" = "Closest to you";
+"Passed away on this day" = "Passed away on this day";
+
+
+//FAQ View
+"faq.question1" = "What is a Stolperstein?";
+"faq.answer1" = "The purpose of a Stolperstein, also known as a 'stumblestone', is to keep alive the memory of the victims of the Nazi regime during World War II. Stolpersteine are small brass plaques placed in the pavement in front of houses where people lived who were persecuted, deported and murdered by the Nazis.";
+"faq.question2" = "What is the purpose of the Stolperstein?";
+"faq.answer2" = "The aim of Stolpersteine is to give a face to the victims of the Holocaust and to keep the memory of the atrocities of the Nazi regime alive. The project emphasises the importance of individual responsibility and reminds us that the Holocaust was not an abstract event, but a tragedy that affected the lives of millions of people. By placing Stolpersteine, people are encouraged not to forget history and to work for a society based on tolerance, respect and the prevention of such atrocities in the future.";
+"faq.question3" = "How can someone add information about a Stolperstein?";
+"faq.answer3" = "If you would like to add information about a Stolperstein, dates, stories, corrections, missing Stolpersteine or photos, please email them to info@stolpersteine.app";
+"faq.question4" = "How can someone add a Stolperstein?";
+"faq.answer4" = "If someone wants to add a Stolperstein to commemorate a Holocaust victim, there are some steps they can follow:\n - Conduct research: Collect as much information as possible about the victim, including the name, date of birth, deportation date, place of death and any other relevant details. This can be done by consulting relatives, searching archives or contacting local historical bodies. \n - Check local rules and procedures: Contact the relevant authorities, such as the municipality, historical preservation or organizations responsible for the placement of Stolpersteine in your area. Inquire about the specific rules and procedures applicable to the placement of a Stolperstein. Some municipalities have specific guidelines and may require a consent process. \n - Collaborate with the artist: Contact Gunter Demnig (benelux@stolpersteine.eu), the artist behind the Stolperstein Project, or his representatives to discuss the possibility of adding a Stolperstein. They can advise you on the process and possibly recommend an artist who can help create the Stolperstein.\n - Arranging funding: Placing a Stolperstein involves costs, such as manufacturing the plaque and installing it. Make sure you arrange the financial aspects, whether it is personal funding or seeking funds or donations to cover the costs.\n - Determine placement location: Identify the specific location where the Stolperstein should be placed. It should be in front of a house where the victim lived before he or she was deported or murdered. Make sure you get permission from the current residents or responsible authorities to place the Stolperstein at that location.\n - Coordinate placement: Work with the relevant authorities, artists, and other stakeholders to coordinate the placement of the Stolperstein. Ensure that all necessary permits and consents are obtained before the Stolperstein is placed.\n The process can vary depending on the region and specific guidelines, so it is important to follow local procedures and work with the appropriate authorities and organizations to correctly add a Stolperstein.";
+"faq.heading" = "Frequently Asked Questions";
+
+//NavBar
+"Home" = "Home";
+"Map" = "Map";
+"FAQ" = "FAQ";
+"Profile" = "Profile";
+

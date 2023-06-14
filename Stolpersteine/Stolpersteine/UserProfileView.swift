@@ -134,29 +134,29 @@ struct UserProfileView: View {
                     isStonesVisitedSheetPresented = true
                 }
                 .sheet(isPresented: $isStonesVisitedSheetPresented) {
-                    Text(NSLocalizedString("Stones Visited Sheet", comment: ""))
+                    Text("Stones Visited Sheet".localized())
                 }
 
-            CircleView(title: NSLocalizedString("Candles Lit", comment: ""), number: "3", color: brown2)
+            CircleView(title:"Candles Lit".localized(), number: "3", color: brown2)
                 .onTapGesture {
                     isCandlesLitSheetPresented = true
                 }
                 .sheet(isPresented: $isCandlesLitSheetPresented) {
-                    Text(NSLocalizedString("Candles Lit Sheet", comment: ""))
+                    Text("Candles Lit Sheet".localized())
                 }
 
-            CircleView(title: NSLocalizedString("Stones Saved", comment: ""), number: "0", color: brown3)
+            CircleView(title:"Stones Saved".localized(), number: "0", color: brown3)
                 .onTapGesture {
                     isStonesSavedSheetPresented = true
                 }
                 .sheet(isPresented: $isStonesSavedSheetPresented) {
-                    Text(NSLocalizedString("Stones Saved Sheet", comment: ""))
+                    Text("Stones Saved Sheet".localized())
                 }
 
             Button(action: {
                 languageManager.switchLanguage()
             }) {
-                Text(NSLocalizedString("Select Language", comment: ""))
+                Text("Select Language".localized())
                     .font(.headline)
                     .foregroundColor(.white)
                     .padding()

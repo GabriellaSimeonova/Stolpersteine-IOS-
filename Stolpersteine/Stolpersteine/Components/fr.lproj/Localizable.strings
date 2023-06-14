@@ -5,6 +5,36 @@
   Created by Tsveta Pandurska on 13/06/2023.
   
 */
-"profile" = "Votre Profil";
-"Stones Visited" = "Stones Visités";
+
+//Profile View
+"profile" = "Profil";
+"Stones Visited" = "Pierres Visitées";
 "Candles Lit" = "Bougies Allumées";
+"Stones Saved" = "Pierres Sauvegardées";
+"Select Language" = "Sélectionner la Langue";
+"Stones Visited Sheet" = "Feuille de Pierres Visitées";
+"Candles Lit Sheet" = "Feuille de Bougies Allumées";
+"Stones Saved Sheet" = "Feuille de Pierres Sauvegardées";
+
+//Home View
+"Stolperstein of the Day" = "Stolperstein du Jour";
+"Closest to you" = "Le plus proche de vous";
+"Passed away on this day" = "Décédé en ce jour";
+
+//FAQ View
+"faq.question1" = "Qu'est-ce qu'un Stolperstein ?";
+"faq.answer1" = "Le but d'un Stolperstein, également connu sous le nom de 'pierre d'achoppement', est de perpétuer le souvenir des victimes du régime nazi pendant la Seconde Guerre mondiale. Les Stolpersteine sont de petites plaques en laiton placées sur le trottoir devant les maisons où vivaient des personnes persécutées, déportées et assassinées par les nazis.";
+"faq.question2" = "Quel est le but du Stolperstein ?";
+"faq.answer2" = "Le but des Stolpersteine est de donner un visage aux victimes de l'Holocauste et de perpétuer le souvenir des atrocités du régime nazi. Le projet met l'accent sur l'importance de la responsabilité individuelle et nous rappelle que l'Holocauste n'était pas un événement abstrait, mais une tragédie qui a affecté la vie de millions de personnes. En plaçant des Stolpersteine, les gens sont encouragés à ne pas oublier l'histoire et à œuvrer pour une société fondée sur la tolérance, le respect et la prévention de telles atrocités à l'avenir.";
+"faq.question3" = "Comment ajouter des informations sur un Stolperstein ?";
+"faq.answer3" = "Si vous souhaitez ajouter des informations sur un Stolperstein, des dates, des récits, des corrections, des Stolpersteine manquantes ou des photos, veuillez les envoyer par e-mail à info@stolpersteine.app";
+"faq.question4" = "Comment ajouter un Stolperstein ?";
+"faq.answer4" = "Si quelqu'un souhaite ajouter un Stolperstein pour commémorer une victime de l'Holocauste, voici quelques étapes à suivre:\n - Effectuer des recherches : Rassemblez autant d'informations que possible sur la victime, notamment le nom, la date de naissance, la date de déportation, le lieu de décès et tout autre détail pertinent. Cela peut être fait en consultant des proches, en effectuant des recherches dans des archives ou en contactant des organismes historiques locaux. \n - Vérifier les règles et procédures locales : Contactez les autorités compétentes, telles que la municipalité, la préservation historique ou les organisations responsables de la pose de Stolpersteine dans votre région. Renseignez-vous sur les règles et procédures spécifiques applicables à la pose d'un Stolperstein. Certaines municipalités ont des lignes directrices spécifiques et peuvent exiger une procédure d'autorisation. \n - Collaborer avec l'artiste : Contactez Gunter Demnig (benelux@stolpersteine.eu), l'artiste derrière le projet Stolperstein, ou ses représentants pour discuter de la possibilité d'ajouter un Stolperstein. Ils peuvent vous conseiller sur le processus et recommander éventuellement un artiste qui peut vous aider à créer le Stolperstein. \n - Organiser le financement : La pose d'un Stolperstein implique des coûts, tels que la fabrication de la plaque et son installation. Assurez-vous de régler les aspects financiers, qu'il s'agisse de financement personnel ou de recherche de fonds ou de dons pour couvrir les coûts. \n - Déterminer l'emplacement de la pose : Identifiez l'emplacement spécifique où le Stolperstein doit être placé. Il doit être devant une maison où la victime a vécu avant d'être déportée ou assassinée. Assurez-vous d'obtenir l'autorisation des résidents actuels ou des autorités compétentes pour placer le Stolperstein à cet endroit. \n - Coordonner la pose : Travaillez avec les autorités compétentes, les artistes et les autres parties prenantes pour coordonner la pose du Stolperstein. Assurez-vous d'obtenir tous les permis et autorisations nécessaires avant de placer le Stolperstein. \n Le processus peut varier en fonction de la région et des lignes directrices spécifiques, il est donc important de suivre les procédures locales et de travailler avec les autorités et les organisations appropriées pour ajouter correctement un Stolperstein.";
+"faq.heading" = "Foire aux questions";
+
+//NavBar
+"Home" = "Accueil";
+"Map" = "Carte";
+"FAQ" = "FAQ";
+"Profile" = "Profil";
+

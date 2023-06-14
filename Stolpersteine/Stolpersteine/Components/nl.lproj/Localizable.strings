@@ -5,6 +5,36 @@
   Created by Tsveta Pandurska on 13/06/2023.
   
 */
-"profile" = "Jouw Profiel";
+
+//Profile View
+"profile" = "Profiel";
 "Stones Visited" = "Bezochte Stenen";
-"Candles Lit" = "Aangestoken Kaarsen";
+"Candles Lit" = "Kaarsen Aangestoken";
+"Stones Saved" = "Bewaarde Stenen";
+"Select Language" = "Selecteer Taal";
+"Stones Visited Sheet" = "Bezochte Stenen Blad";
+"Candles Lit Sheet" = "Kaarsen Aangestoken Blad";
+"Stones Saved Sheet" = "Bewaarde Stenen Blad";
+
+//Home View
+"Stolperstein of the Day" = "Stolperstein van de Dag";
+"Closest to you" = "Dichtstbijzijnde bij jou";
+"Passed away on this day" = "Overleden op deze dag";
+
+//FAQ View
+"faq.question1" = "Wat is een Stolperstein?";
+"faq.answer1" = "Het doel van een Stolperstein, ook wel bekend als een 'struikelsteen', is om de herinnering levend te houden aan de slachtoffers van het naziregime tijdens de Tweede Wereldoorlog. Stolpersteine zijn kleine bronzen plaquettes die in het trottoir voor huizen worden geplaatst waar mensen woonden die werden vervolgd, gedeporteerd en vermoord door de nazi's.";
+"faq.question2" = "Wat is het doel van de Stolperstein?";
+"faq.answer2" = "Het doel van Stolpersteine is om een gezicht te geven aan de slachtoffers van de Holocaust en de herinnering levend te houden aan de gruweldaden van het naziregime. Het project benadrukt het belang van individuele verantwoordelijkheid en herinnert ons eraan dat de Holocaust geen abstracte gebeurtenis was, maar een tragedie die het leven van miljoenen mensen heeft beïnvloed. Door Stolpersteine te plaatsen, worden mensen aangemoedigd om de geschiedenis niet te vergeten en te streven naar een samenleving gebaseerd op tolerantie, respect en het voorkomen van dergelijke gruweldaden in de toekomst.";
+"faq.question3" = "Hoe kan iemand informatie toevoegen over een Stolperstein?";
+"faq.answer3" = "Als u informatie wilt toevoegen over een Stolperstein, zoals data, verhalen, correcties, ontbrekende Stolpersteine of foto's, stuur deze dan naar info@stolpersteine.app";
+"faq.question4" = "Hoe kan iemand een Stolperstein toevoegen?";
+"faq.answer4" = "Als iemand een Stolperstein wil toevoegen ter nagedachtenis aan een Holocaustslachtoffer, zijn er enkele stappen die ze kunnen volgen:\n - Doe onderzoek: Verzamel zoveel mogelijk informatie over het slachtoffer, inclusief de naam, geboortedatum, deportatiedatum, plaats van overlijden en andere relevante details. Dit kan worden gedaan door familieleden te raadplegen, archieven te doorzoeken of contact op te nemen met lokale historische instanties. \n - Controleer lokale regels en procedures: Neem contact op met de relevante autoriteiten, zoals de gemeente, historisch behoud of organisaties die verantwoordelijk zijn voor de plaatsing van Stolpersteine in uw regio. Informeer naar de specifieke regels en procedures die van toepassing zijn op de plaatsing van een Stolperstein. Sommige gemeenten hebben specifieke richtlijnen en kunnen een toestemmingsproces vereisen. \n - Werk samen met de kunstenaar: Neem contact op met Gunter Demnig (benelux@stolpersteine.eu), de kunstenaar achter het Stolperstein-project, of zijn vertegenwoordigers om de mogelijkheid van het toevoegen van een Stolperstein te bespreken. Zij kunnen u adviseren over het proces en mogelijk een kunstenaar aanbevelen die kan helpen bij het maken van de Stolperstein.\n - Regel financiering: Het plaatsen van een Stolperstein brengt kosten met zich mee, zoals het vervaardigen van de plaquette en het installeren ervan. Zorg ervoor dat u de financiële aspecten regelt, of het nu gaat om persoonlijke financiering of het zoeken naar fondsen of donaties om de kosten te dekken.\n - Bepaal de plaatsingslocatie: Identificeer de specifieke locatie waar de Stolperstein moet worden geplaatst. Het moet voor een huis zijn waar de slachtoffer woonde voordat hij of zij werd gedeporteerd of vermoord. Zorg ervoor dat u toestemming krijgt van de huidige bewoners of verantwoordelijke autoriteiten om de Stolperstein op die locatie te plaatsen.\n - Coördineer de plaatsing: Werk samen met de relevante autoriteiten, kunstenaars en andere betrokkenen om de plaatsing van de Stolperstein te coördineren. Zorg ervoor dat alle noodzakelijke vergunningen en toestemmingen worden verkregen voordat de Stolperstein wordt geplaatst.\n Het proces kan variëren afhankelijk van de regio en specifieke richtlijnen, dus het is belangrijk om de lokale procedures te volgen en samen te werken met de juiste autoriteiten en organisaties om correct een Stolperstein toe te voegen.";
+"faq.heading" = "Veelgestelde Vragen";
+
+//NavBar
+"Home" = "Thuis";
+"Map" = "Kaart";
+"FAQ" = "Veelgestelde vragen";
+"Profile" = "Profiel";
+

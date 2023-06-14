@@ -225,6 +225,8 @@ class ViewModel: ObservableObject {
 struct HomeView: View {
     @StateObject var viewModel = ViewModel()
     @State private var isFirstAppear = true
+    
+    @EnvironmentObject var languageManager:LanguageManager
 
     var body: some View {
         NavigationView {
@@ -234,7 +236,7 @@ struct HomeView: View {
                 } else {
                     ScrollView {
                         VStack {
-                            Text("Stolperstein of the Day")
+                            Text("Stolperstein of the Day".localized())
                                 .font(.title)
                                 .foregroundColor(Color(hex: "7F462C"))
                                 .bold()
@@ -245,7 +247,7 @@ struct HomeView: View {
 
                             ScrollView(.horizontal, showsIndicators: false) {
                                 VStack(alignment: .leading) {
-                                    Text("Closest to you")
+                                    Text("Closest to you".localized())
                                         .font(.title2)
                                         .bold()
                                         .foregroundColor(Color(hex: "7F462C"))
@@ -278,7 +280,7 @@ struct HomeView: View {
 
                             ScrollView(.horizontal, showsIndicators: false) {
                                 VStack(alignment: .leading) {
-                                    Text("Passed away on this day")
+                                    Text("Passed away on this day".localized())
                                         .font(.title2)
                                         .bold()
                                         .foregroundColor(Color(hex: "7F462C"))

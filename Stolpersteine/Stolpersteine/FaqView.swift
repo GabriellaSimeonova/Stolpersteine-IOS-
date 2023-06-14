@@ -16,15 +16,22 @@ struct FAQItem: Identifiable {
 }
 
 struct FAQView: View {
+    
+    @EnvironmentObject var languageManager:LanguageManager
+    
     @State private var faqItems: [FAQItem] = [
-        FAQItem(question: "Question 1", answer: "Answer 1"),
-        FAQItem(question: "Question 2", answer: "Answer 2"),
-        FAQItem(question: "Question 3", answer: "Answer 3"),
+        FAQItem(question: "faq.question1".localized(), answer: "faq.answer1".localized()),
+        FAQItem(question: "faq.question2".localized(), answer: "faq.answer2".localized()),
+        FAQItem(question: "faq.question3".localized(), answer: "faq.answer3".localized()),
+        FAQItem(question: "faq.question4".localized(), answer: "faq.answer4".localized()),
     ]
 
     var body: some View {
+        
+        
+        
         VStack {
-            Text("Frequently Asked Questions")
+            Text("faq.heading".localized())
                 .font(.headline)
                 .fontWeight(.bold)
                 .multilineTextAlignment(.center)

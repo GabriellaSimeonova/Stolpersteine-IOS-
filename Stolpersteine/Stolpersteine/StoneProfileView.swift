@@ -128,7 +128,7 @@ struct POVView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
             HStack(spacing: 12) {
-                Text("Victims's POV:")
+                Text("My Story:")
                     .font(.title)
                     .bold()
                     .multilineTextAlignment(.center)
