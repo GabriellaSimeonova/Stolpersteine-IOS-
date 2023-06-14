@@ -81,21 +81,6 @@
 //    }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import SwiftUI
 
 enum Language: String {
@@ -122,11 +107,24 @@ struct UserProfileView: View {
     var body: some View {
         VStack(spacing: 20) {
             ZStack(alignment: .topTrailing) {
+                HStack{
+                    
+                    Text("profile".localized())
+                        .font(.title2)
+                        .bold()
+                        .padding()
+                    
+                    Button(action: {
+                        languageManager.switchLanguage()
+                    }) {
+                        Image(languageManager.currentLanguage.lowercased())
+                            .resizable()
+                            .frame(width: 30, height: 30)
+                            .clipShape(Circle())
+                    }
 
-                Text("profile".localized())
-                    .font(.title2)
-                    .bold()
-                    .padding()
+                    
+                }
             }
 
             CircleView(title:"Stones Visited".localized(), number: "1", color: darkBrown)
@@ -153,17 +151,7 @@ struct UserProfileView: View {
                     Text("Stones Saved Sheet".localized())
                 }
 
-            Button(action: {
-                languageManager.switchLanguage()
-            }) {
-                Text("Select Language".localized())
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(Color.blue)
-                    .cornerRadius(10)
-            }
-            
+        
         }
         .padding(.top, -90)
         .padding()
