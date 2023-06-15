@@ -19,11 +19,7 @@ struct ContentView: View {
        }
     
     
-       var locationCoordinate: CLLocationCoordinate2D {
-           CLLocationCoordinate2D(
-               latitude: 51.4381,
-               longitude: 5.4752)
-       }
+       
    
     var body: some View {
         TabView{
@@ -32,7 +28,7 @@ struct ContentView: View {
                 Image(systemName: "house")
                     Text("Home".localized())
             }
-            MapView(coordinate: locationCoordinate)
+            MapView()
                 .tabItem(){
                 Image(systemName: "map")
                     Text("Map".localized())
