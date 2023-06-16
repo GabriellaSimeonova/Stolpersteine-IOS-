@@ -7,6 +7,7 @@
 
 import SwiftUI
 import OpenAISwift
+import AVFoundation
 
 final class InfoPageViewModel: ObservableObject {
     private var client: OpenAISwift?
@@ -74,7 +75,7 @@ struct StoneProfileView: View {
                                 .foregroundColor(Color(hex: "7F462C"))
                         }
                     }.padding()
-                    PlayStoryButtonView()
+                    PlayStoryButtonView(text: povResponse)
                 }
                 
                 // Story of the victim
