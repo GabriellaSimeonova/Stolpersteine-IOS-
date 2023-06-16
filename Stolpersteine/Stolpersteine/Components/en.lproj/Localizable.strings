@@ -41,10 +41,10 @@
 
 //Stone Profile
 "stone-city" = "City: ";
-"Address: %@" = "Address: %@";
-"Date of Birth: %@" = "Date of Birth: %@";
-"Date of Passing: %@" = "Date of Passing: %@";
-"Place of Passing: %@" = "Place of Passing: %@";
-"Reason of Passing: %@" = "Reason of Passing: %@";
+"Address: " = "Address: ";
+"Date of Birth: " = "Date of Birth: ";
+"Date of Passing: " = "Date of Passing: ";
+"Place of Passing: " = "Place of Passing: ";
+"Reason of Passing: " = "Reason of Passing: ";
 "My Story:" = "My Story:";
 

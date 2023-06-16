@@ -40,10 +40,10 @@
 
 //Stone Profile
 "stone-city" = "Stad: ";
-"Address: %@" = "Adres: %@";
-"Date of Birth: %@" = "Geboortedatum: %@";
-"Date of Passing: %@" = "Datum van overlijden: %@";
-"Place of Passing: %@" = "Plaats van overlijden: %@";
-"Reason of Passing: %@" = "Reden van overlijden: %@";
+"Address: " = "Adres: ";
+"Date of Birth: " = "Geboortedatum: ";
+"Date of Passing: " = "Datum van overlijden: ";
+"Place of Passing: " = "Plaats van overlijden: ";
+"Reason of Passing: " = "Reden van overlijden: ";
 "My Story:" = "Mijn verhaal:";
 
