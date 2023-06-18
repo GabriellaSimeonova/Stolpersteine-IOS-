@@ -15,25 +15,69 @@ struct MapView: View {
         span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
     )
     @State private var searchText = ""
-    
+    @State var isTapped = false
+    @State var selectedVictim  = Victim(
+        id: 1,
+        name: "John Doe",
+        city: "Example City",
+        address: "Example Address",
+        dateOfBirth: "01/01/1990",
+        dateOfPassing: "01/01/2023",
+        placeOfPassing: "Example Place",
+        reasonOfPassing: "Example Reason",
+        location: Victim.Coordinates(lat: 0, long: 0)
+    )
     
     var body: some View {
-       
-        VStack{
-            SearchBar(text: $searchText)
-                              .padding(.top, 16)
-            Map(coordinateRegion:  $region,
-                annotationItems: vm.victims,
-                annotationContent: { victim in
-                MapMarker(coordinate: victim.locationCoordinate, tint: Color(hex: "7F462C"))
-            })
-            .onAppear {
+        
+        ZStack{
+            
+            VStack{
+                SearchBar(text: $searchText)
+                    .padding(.top, 16)
+                Map(coordinateRegion:  $region,
+                    annotationItems: vm.victims,
+                    annotationContent: { victim in
+                    
+                    
+                    //                MapMarker(coordinate: victim.locationCoordinate, tint: Color(hex: "7F462C"))
+                    MapAnnotation(coordinate: victim.locationCoordinate){
+                        LocationMapAnnotationView()
+                        
+                        
+                            .onTapGesture {
+                                print("\(victim.name)")
+                                isTapped.toggle()
+                                selectedVictim = victim
+                            }
+                        
+                       
+                        
+                    }
+                    
+                }
                 
-                     vm.fetch()
+                )
+                .onAppear {
+                    
+                    vm.fetch()
+                    
+                }
+                
+               
+                if(isTapped == true){
+                   
+                        VictimMapInfo(victim: selectedVictim)
+                            .shadow(color: Color.black.opacity(0.3), radius: 20)
+                            .padding(0)
+                            .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
+                            .background(ignoresSafeAreaEdges: .all)
+                    }
                 
             }
         }
     }
+    
     
     
 //    private func addPin(){
@@ -98,5 +142,6 @@ struct SearchBar: View {
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
         MapView()
+        
     }
 }
