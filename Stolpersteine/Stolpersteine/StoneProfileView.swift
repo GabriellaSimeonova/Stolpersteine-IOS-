@@ -8,8 +8,6 @@
 import SwiftUI
 import OpenAISwift
 import AVFoundation
-import SDWebImageSwiftUI
-import UIKit
 
 final class InfoPageViewModel: ObservableObject {
     private var client: OpenAISwift?
